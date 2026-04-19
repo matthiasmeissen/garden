@@ -1,15 +1,11 @@
-# shaders
- 
-## Learning Progression
- 
-- Foundational:
-- Intermediate:
-- Advanced:
- 
+# Shaders
+
+[tags: #shaders]
+
+GPU shaders — fragment, vertex, compute.
+
+## Contents
+
 ## Key Resources
- 
-- 
- 
+
 ## Ideas
- 
-- 

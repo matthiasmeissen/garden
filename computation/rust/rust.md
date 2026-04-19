@@ -1,15 +1,11 @@
-# rust
- 
-## Learning Progression
- 
-- Foundational:
-- Intermediate:
-- Advanced:
- 
+# Rust
+
+[tags: #rust]
+
+Rust language, patterns, and projects.
+
+## Contents
+
 ## Key Resources
- 
-- 
- 
+
 ## Ideas
- 
-- 

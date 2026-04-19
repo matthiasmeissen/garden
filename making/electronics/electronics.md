@@ -1,15 +1,11 @@
-# electronics
- 
-## Learning Progression
- 
-- Foundational:
-- Intermediate:
-- Advanced:
- 
+# Electronics
+
+[tags: #electronics]
+
+Circuits, PCBs, and hardware projects.
+
+## Contents
+
 ## Key Resources
- 
-- 
- 
+
 ## Ideas
- 
-- 

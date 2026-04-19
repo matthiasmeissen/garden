@@ -1,15 +1,11 @@
-# game-engines
- 
-## Learning Progression
- 
-- Foundational:
-- Intermediate:
-- Advanced:
- 
+# Game Engines
+
+[tags: #game-engines]
+
+Game engines and interactive runtimes.
+
+## Contents
+
 ## Key Resources
- 
-- 
- 
+
 ## Ideas
- 
-- 

@@ -1,15 +1,11 @@
-# woodworking
- 
-## Learning Progression
- 
-- Foundational:
-- Intermediate:
-- Advanced:
- 
+# Woodworking
+
+[tags: #woodworking]
+
+Woodworking — tools, joinery, projects.
+
+## Contents
+
 ## Key Resources
- 
-- 
- 
+
 ## Ideas
- 
-- 
