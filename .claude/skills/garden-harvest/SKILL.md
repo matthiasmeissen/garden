@@ -73,7 +73,7 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 - Things that were tried and corrected mid-session
 - Anything a beginner's tutorial would cover
 - Structural decisions about the garden itself
-- Ideas, next steps, or things to investigate — never infer these unprompted; only add if the user explicitly asks
+- Ideas, next steps, or things to investigate — never infer these unprompted; only add if the user explicitly asks. An idea is a concrete future action ("build X", "learn Y", "order Z") — distinct from an insight, which is something already understood.
 
 ### Step 4 — Produce the harvest document
 

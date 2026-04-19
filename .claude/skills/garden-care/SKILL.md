@@ -75,10 +75,11 @@ Check for each of the following issues:
 **Oversized concept files**
 - Files significantly over 2000 words that could be split into two focused files
 
-**Stale ideas**
-- Ideas are added manually by the user and should not be touched by plant or harvest
-- Care may flag ideas that have grown into full concept files already (i.e. the idea was acted on and a file now exists) so the idea entry can be cleaned up
-- Never remove or rewrite ideas — only flag them for the user to decide
+**Ideas to review**
+- An idea is a concrete future action — something to build, learn, make, or acquire (e.g. "build an injection moulding machine", "learn about LoRa networks")
+- Ideas are added by the user only, never by Claude unprompted
+- Care may flag idea entries where a concept file already exists for that topic, so the user can decide to remove the now-redundant idea entry
+- Never rewrite, remove, or add ideas — only flag them for the user to decide
 
 **Inconsistent tags**
 - Similar concepts tagged differently across files (e.g. `#synthesis` vs `#synth`)

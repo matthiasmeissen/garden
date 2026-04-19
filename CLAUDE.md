@@ -38,9 +38,21 @@ Tags connect across domains — use them in every file. Tools get tags, not fold
 
 ## Ideas
 
-Ideas are never generated or inferred by Claude unprompted. Claude only adds ideas when explicitly told to — e.g. "add this idea to DSP" or "note this as an idea in woodworking". The Ideas section in hub files is the user's space to curate.
+An idea is a concrete, actionable thing to do, build, learn, or acquire in the future. It is always personal intent — something the user wants to pursue. Examples:
 
-The one exception: garden-care may flag an idea entry that has already been acted on (i.e. a concept file now exists for it), so the user can decide to clean it up.
+- Learn about LoRa networks
+- Sew a new jacket
+- Build an injection moulding machine
+- Order new chisels from Dictum
+- Explore waveguide synthesis
+- Build a VCV Rack module in Rust
+
+Ideas are distinct from:
+- **Insights** — things understood or figured out (go in concept files)
+- **Resources** — books, tools, links worth referencing (go in Key Resources)
+- **Cross-references** — connections between existing files
+
+Claude never generates or infers ideas unprompted. Only add an idea when the user explicitly says to — e.g. "add this idea to woodworking" or "note this as an idea in DSP".
 
 ## Simple Edits
 

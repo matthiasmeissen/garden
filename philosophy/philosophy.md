@@ -18,7 +18,3 @@ The motivation and thinking behind how I learn and build. Overarching principles
 - archive.org — source for old out-of-print foundational texts — expertise: all levels
 
 ## Ideas
-
-- `ephemeralization.md` — Fuller's do more with less applied across software, hardware, and craft
-- `whole-systems.md` — understanding the system a problem lives in before attacking the problem
-- Search for an existing skill tree before building chunks from scratch for a new domain
