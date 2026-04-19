@@ -36,6 +36,12 @@ One concept per file. Named lowercase and hyphenated (`moog-ladder-filter.md`). 
 
 Tags connect across domains — use them in every file. Tools get tags, not folders: `#eurorack`, `#faust`, `#vcv-rack`, `#supercollider`, `#pcb`, `#3d-printing` etc.
 
+## Ideas
+
+Ideas are never generated or inferred by Claude unprompted. Claude only adds ideas when explicitly told to — e.g. "add this idea to DSP" or "note this as an idea in woodworking". The Ideas section in hub files is the user's space to curate.
+
+The one exception: garden-care may flag an idea entry that has already been acted on (i.e. a concept file now exists for it), so the user can decide to clean it up.
+
 ## Simple Edits
 
 For quick tasks, just do them directly — no skill needed:

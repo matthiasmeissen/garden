@@ -73,7 +73,7 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 - Things that were tried and corrected mid-session
 - Anything a beginner's tutorial would cover
 - Structural decisions about the garden itself
-- Ideas, next steps, or things to investigate — those are personal intent, added manually by the user
+- Ideas, next steps, or things to investigate — never infer these unprompted; only add if the user explicitly asks
 
 ### Step 4 — Produce the harvest document
 

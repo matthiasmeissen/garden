@@ -88,7 +88,7 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 | Philosophy / principle / approach | Create a file in `philosophy/` — e.g. `philosophy/finding-good-information.md` |
 | Core vault description or "about" content | `philosophy/philosophy.md` one-paragraph description only |
 
-**Never add ideas on behalf of the user. Ideas are personal intent and are always added manually.**
+**Never add ideas unprompted. Only add an idea if the user explicitly asks for it.**
 **Never route full concepts, explanations, or multi-bullet sections into any hub file.**
 
 ### Step 4 — Write the files
