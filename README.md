@@ -16,7 +16,7 @@ Two main domains, three levels deep maximum.
 
 **principles-and-philosophy.md** — the thinking behind how I approach learning and building
 
-Each subdomain has an `_index.md` with a learning progression, key resources, and an ideas backlog.
+Each folder has a hub file named after the folder (e.g. `rust/rust.md`) with a learning progression, key resources, and an ideas backlog. This keeps Obsidian graph nodes readable.
 
 ## How It Works
 

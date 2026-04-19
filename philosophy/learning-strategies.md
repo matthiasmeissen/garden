@@ -34,5 +34,5 @@ In short: find the foundational texts, start making, let practice generate speci
 
 ## See Also
 
-- [[_index|Philosophy Index]]
+- [[philosophy|Philosophy Index]]
 - [[finding-good-information|Finding Good Information]] — how to source the foundational texts this strategy depends on

@@ -37,5 +37,5 @@ Consumption alone cannot tell you which ideas are load-bearing. The final filter
 
 ## See Also
 
-- [[_index|Philosophy Index]]
+- [[philosophy|Philosophy Index]]
 - [[learning-strategies|Learning Strategies]] — how this approach fits into learning new topics
