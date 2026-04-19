@@ -18,7 +18,7 @@ Waiting until you "feel ready" is a trap. The feeling of readiness arrives only 
 
 ## Triangulate
 
-Do not trust a single source, including a foundational one. Read two or three anchors in different formats (a book, a practitioner's notes, a reference manual). Cross-check what they agree on — that is the durable part. Pay attention to where they disagree — that is where the nuance lives, and often where the interesting choices in the field are made.
+Do not trust a single source. Read two or three anchors in different formats and cross-check — see [[finding-good-information|Finding Good Information]] for the full approach.
 
 ## Use Cross-References Between Domains
 

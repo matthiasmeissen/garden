@@ -19,5 +19,4 @@ The motivation and thinking behind how I learn and build. Overarching principles
 ## Ideas
 
 - `ephemeralization.md` — Fuller's do more with less applied across software, hardware, and craft
-- `make-things.md` — building as the primary mode of learning, consumption as reference only
 - `whole-systems.md` — understanding the system a problem lives in before attacking the problem
