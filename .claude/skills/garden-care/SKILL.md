@@ -16,17 +16,25 @@ This skill runs inside the `garden/` repo via Claude Code. It has filesystem acc
 ```
 garden/
   computation/
-    _index.md
-    rust/_index.md        embedded-systems/_index.md   dsp/_index.md
-    shaders/_index.md     touchdesigner/_index.md      game-engines/_index.md
-    web/_index.md
+    computation.md                        <- domain hub
+    rust/rust.md                          <- subdomain hub
+    embedded-systems/embedded-systems.md
+    dsp/dsp.md
+    shaders/shaders.md
+    touchdesigner/touchdesigner.md
+    game-engines/game-engines.md
+    web/web.md
   making/
-    _index.md
-    woodworking/_index.md   electronics/_index.md   music-making-and-synthesis/_index.md
+    making.md                             <- domain hub
+    woodworking/woodworking.md
+    electronics/electronics.md
+    music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    _index.md
+    philosophy.md                         <- domain hub
     [concept files]
 ```
+
+**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`). Hub files are navigation only — not content files.
 
 ## Scope
 
@@ -51,9 +59,9 @@ Read all files within the requested scope. Build a mental map of:
 
 Check for each of the following issues:
 
-**Bloated indexes**
-- Any `_index.md` containing explanatory paragraphs, multi-bullet concept sections, or "How I approach X" content
-- Indexes should only contain: one-paragraph description, contents list, key resources (one line each), ideas (one line each)
+**Bloated hub files**
+- Any hub file (e.g. `dsp/dsp.md`, `philosophy/philosophy.md`) containing explanatory paragraphs, multi-bullet concept sections, or "How I approach X" content
+- Hub files should only contain: one-paragraph description, contents list, key resources (one line each), ideas (one line each)
 
 **Duplicate or overlapping content**
 - Two or more files covering the same concept
@@ -61,7 +69,7 @@ Check for each of the following issues:
 - Harvests from different sessions that landed in the same place and now repeat each other
 
 **Orphaned files**
-- Concept files not linked from any `_index.md`
+- Concept files not linked from any hub file
 - Files with no tags and no See Also links
 
 **Oversized concept files**
@@ -94,27 +102,27 @@ Format:
 
 ---
 
-## Bloated Indexes
+## Bloated Hub Files
 
-### philosophy/_index.md
+### philosophy/philosophy.md
 The "First Principles" section (8 bullet points) and "How I Approach Topics" section should move to concept files.
-→ Proposed: extract to `philosophy/ephemeralization.md` and `philosophy/learning-strategies.md`, replace with index entries
+→ Proposed: extract to `philosophy/ephemeralization.md` and `philosophy/learning-strategies.md`, replace with hub entries
 
 ---
 
 ## Duplicates & Overlap
 
-### computation/dsp/_index.md + computation/dsp/filters.md
-The index contains a full explanation of filter types that duplicates filters.md.
-→ Proposed: remove the explanation from the index, keep the link
+### computation/dsp/dsp.md + computation/dsp/filters.md
+The hub contains a full explanation of filter types that duplicates filters.md.
+→ Proposed: remove the explanation from the hub, keep the link
 
 ---
 
 ## Orphaned Files
 
 ### computation/shaders/noise-functions.md
-Not linked from `computation/shaders/_index.md`.
-→ Proposed: add to shaders index contents list
+Not linked from `computation/shaders/shaders.md`.
+→ Proposed: add to shaders hub contents list
 
 ---
 

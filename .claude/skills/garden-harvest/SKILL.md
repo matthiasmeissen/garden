@@ -23,17 +23,26 @@ The output is ready to hand to `garden-plant` for vault insertion.
 ```
 garden/
   computation/
-    _index.md
-    rust/         embedded-systems/   dsp/
-    shaders/      touchdesigner/      game-engines/   web/
+    computation.md                   <- domain hub
+    rust/rust.md                     <- subdomain hub
+    embedded-systems/embedded-systems.md
+    dsp/dsp.md
+    shaders/shaders.md
+    touchdesigner/touchdesigner.md
+    game-engines/game-engines.md
+    web/web.md
   making/
-    _index.md
-    woodworking/  electronics/   music-making-and-synthesis/
+    making.md                        <- domain hub
+    woodworking/woodworking.md
+    electronics/electronics.md
+    music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    _index.md                        <- core principles and manifesto
+    philosophy.md                    <- domain hub, core principles and manifesto
     finding-good-information.md      <- example concept file
     [other concept files...]
 ```
+
+**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`, not `rust/_index.md`). This makes Obsidian graph nodes readable.
 
 **Domain tags to use:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
 

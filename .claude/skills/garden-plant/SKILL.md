@@ -16,23 +16,25 @@ This skill runs inside the `garden/` repo via Claude Code. It has filesystem acc
 ```
 garden/
   computation/
-    _index.md                        <- table of contents + ideas
-    rust/_index.md
-    embedded-systems/_index.md
-    dsp/_index.md
-    shaders/_index.md
-    touchdesigner/_index.md
-    game-engines/_index.md
-    web/_index.md
+    computation.md                        <- domain hub
+    rust/rust.md
+    embedded-systems/embedded-systems.md
+    dsp/dsp.md
+    shaders/shaders.md
+    touchdesigner/touchdesigner.md
+    game-engines/game-engines.md
+    web/web.md
   making/
-    _index.md                        <- table of contents + ideas
-    woodworking/_index.md
-    electronics/_index.md
-    music-making-and-synthesis/_index.md
+    making.md                             <- domain hub
+    woodworking/woodworking.md
+    electronics/electronics.md
+    music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    _index.md                        <- core principles and manifesto
+    philosophy.md                         <- domain hub
     [concept files, one per idea]
 ```
+
+**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`). This makes Obsidian graph nodes readable. Never use `_index.md`.
 
 **File rules:**
 - Max 3 levels deep — never go deeper
@@ -68,8 +70,8 @@ Parse out: domain(s), tags, concepts, decisions, resources, ideas, cross-referen
 ### Step 2 — Read the current vault state
 
 Before writing anything, read the relevant existing files:
-- The domain `_index.md` (e.g. `computation/_index.md`)
-- The subdomain `_index.md` (e.g. `computation/dsp/_index.md`)
+- The domain hub (e.g. `computation/computation.md`)
+- The subdomain hub (e.g. `computation/dsp/dsp.md`)
 - Any existing concept files that might overlap with what you're planting
 
 This prevents duplicating content that's already there.
@@ -81,13 +83,13 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 | Content type | Action |
 |---|---|
 | Any named concept, approach, or idea with more than a sentence to say | Create a new concept file |
-| Resource (book, tool, link) | One line in Key Resources of the relevant `_index.md` |
-| Idea or open question | One line in Ideas of the relevant `_index.md` |
-| Cross-domain concept | Create file in primary domain; add See Also link in secondary domain `_index.md` |
-| Philosophy / principle / approach | Create a file in `philosophy/` — e.g. `philosophy/finding-good-information.md`, `philosophy/learning-strategies.md` |
-| Core vault description or "about" content | `philosophy/_index.md` one-paragraph description only |
+| Resource (book, tool, link) | One line in Key Resources of the relevant subdomain hub (e.g. `dsp/dsp.md`) |
+| Idea or open question | One line in Ideas of the relevant subdomain hub |
+| Cross-domain concept | Create file in primary domain; add See Also link in secondary domain hub |
+| Philosophy / principle / approach | Create a file in `philosophy/` — e.g. `philosophy/finding-good-information.md` |
+| Core vault description or "about" content | `philosophy/philosophy.md` one-paragraph description only |
 
-**Never route full concepts, explanations, or multi-bullet sections into any `_index.md`.**
+**Never route full concepts, explanations, or multi-bullet sections into any hub file.**
 
 ### Step 4 — Write the files
 
@@ -100,11 +102,11 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 [body: plain language, written for your future self after a long break]
 
 ## See Also
-- [[../_index|Domain Index]]
+- [[../subdomain-name|Subdomain Hub]]
 - [[../../other-domain/subdomain/concept|Related Concept]] — why they relate
 ```
 
-**Updating any `_index.md` (index entries only):**
+**Updating any hub file (hub entries only):**
 ```
 ## Contents
 - [[concept-filename|Concept Name]] — one-line description
@@ -116,10 +118,10 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 - one-line idea or open question
 ```
 
-**`philosophy/_index.md` specifically:**
+**`philosophy/philosophy.md` specifically:**
 - One short paragraph: what this domain is and why it exists
 - Contents list linking to concept files
-- No principles written out here — those live in concept files like `ephemeralization.md`, `finding-good-information.md`
+- No principles written out here — those live in concept files like `philosophy/ephemeralization.md`
 
 ### Step 5 — Confirm and suggest commit
 
