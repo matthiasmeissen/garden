@@ -29,18 +29,16 @@ garden/
     game-engines/game-engines.md
     web/web.md
   making/
-    making.md                        <- domain hub
+    making.md
     woodworking/woodworking.md
     electronics/electronics.md
     music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    philosophy.md                    <- domain hub
+    philosophy.md
     [concept files...]
-  projects/
-    [one .md per project, thin wrappers — do not harvest into these]
 ```
 
-**Categories:** `computation` / `making` / `device` / `philosophy`
+**Categories:** `computation` / `making` / `philosophy`
 
 **Tags:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
 
@@ -48,33 +46,27 @@ garden/
 
 ### Step 1 — Read the input
 
-The user will either:
-- Say "harvest this conversation" (meaning the current session)
-- Paste a transcript from another session
-
-If ambiguous, ask: "Should I harvest the current conversation, or do you have a transcript to paste?"
+The user will either say "harvest this conversation" or paste a transcript. If ambiguous, ask.
 
 ### Step 2 — Identify the domain(s)
 
-Map the content to one or more garden domains. Flag cross-domain content explicitly.
+Map to one or more garden domains. Flag cross-domain content explicitly.
 
 ### Step 3 — Distil ruthlessly
 
-Read the whole session. Then ask: what here would be genuinely useful to know six months from now, to someone who already understands the basics of this topic?
-
 **Keep:**
-- Insights that required reasoning to arrive at — not things obvious or easily Googled
+- Insights that required reasoning to arrive at
 - Decisions with non-obvious reasoning ("chose X over Y because Z")
 - Patterns or approaches that took effort to figure out
 - Resources that are hard to find or specifically recommended
 
 **Drop:**
-- Anything conversational or exploratory that didn't land anywhere
-- Concepts that are common knowledge in the domain
-- Things that were tried and corrected mid-session
+- Conversational filler that didn't land anywhere
+- Common knowledge in the domain
+- Things tried and corrected mid-session
 - Anything a beginner's tutorial would cover
 - Structural decisions about the garden itself
-- Ideas, next steps, or things to investigate — never infer these unprompted. An idea is a concrete future action ("build X", "learn Y", "order Z") — distinct from an insight.
+- Ideas — never infer these unprompted. An idea is a concrete future action ("build X", "learn Y") — distinct from an insight.
 
 ### Step 4 — Produce the harvest document
 
@@ -86,33 +78,29 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 [secondary domain if cross-domain]
 
 ## Category
-[computation / making / device / philosophy]
+[computation / making / philosophy]
 
 ## Tags
 [space-separated, e.g. #dsp #rust #filters]
 
 ## Distilled Insights
 
-- **[Insight name]**: [1–2 sentences. Plain language. Written for your future self after a long break.]
+- **[Insight name]**: [1–2 sentences. Plain language. For your future self after a long break.]
 
 ## Resources
 
 - [Title] — [Author] — [why it's worth reading] — expertise: [beginner/intermediate/advanced]
-
-## Related Projects
-
-- [project-key] — [one line on how it relates]
 
 ## Cross-References
 
 - Relates to: [other domain/file] — [one line on why]
 ```
 
-Omit any section that has nothing worth adding. No Ideas section — ideas are added by the user directly.
+Omit any section with nothing worth adding. No Ideas section.
 
 ## Tone
 
-Write as if leaving a note for yourself after a long break. Assume you remember the context but have forgotten the specifics. Be direct — no preamble, no "in this session we explored...".
+Direct. No preamble. Write as if leaving a note for yourself after a long break.
 
 ## After Harvesting
 

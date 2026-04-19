@@ -9,7 +9,7 @@ Read a harvest document and write it directly into the garden vault using file t
 
 ## Context
 
-This skill runs inside the `garden/` repo via Claude Code. It has filesystem access. It reads, creates, and edits files directly. It does not produce instructions for a human to follow.
+This skill runs inside the `garden/` repo via Claude Code. It reads, creates, and edits files directly. It does not produce instructions for a human to follow.
 
 ## Garden Structure
 
@@ -17,7 +17,7 @@ This skill runs inside the `garden/` repo via Claude Code. It has filesystem acc
 garden/
   computation/
     computation.md                        <- domain hub
-    rust/rust.md                          <- subdomain hub
+    rust/rust.md
     embedded-systems/embedded-systems.md
     dsp/dsp.md
     shaders/shaders.md
@@ -25,24 +25,22 @@ garden/
     game-engines/game-engines.md
     web/web.md
   making/
-    making.md                             <- domain hub
+    making.md
     woodworking/woodworking.md
     electronics/electronics.md
     music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    philosophy.md                         <- domain hub
-    [concept files, one per idea]
-  projects/
-    [one .md per project — thin wrappers, data managed by script]
+    philosophy.md
+    [concept files]
 ```
 
-**Hub file naming:** Every folder has one hub file named after the folder (e.g. `rust/rust.md`). Never use `_index.md`.
+**Hub naming:** Every folder has one hub file named after the folder. Never `_index.md`.
 
 ## Frontmatter
 
 Every file Claude creates must include YAML frontmatter.
 
-**Hub file:**
+**Hub:**
 ```markdown
 ---
 type: hub
@@ -51,7 +49,7 @@ tags: [dsp, audio]
 ---
 ```
 
-**Concept file:**
+**Concept:**
 ```markdown
 ---
 type: concept
@@ -61,66 +59,62 @@ reference: https://github.com/matthiasmeissen/dsp-playground
 ---
 ```
 
-**Categories:** `computation` / `making` / `device` / `philosophy`
+`reference` is optional — include when the concept directly relates to a project or external resource.
+
+**Categories:** `computation` / `making` / `philosophy`
 
 ## The Index Budget — CRITICAL
 
-Hub files are navigation only. Hard limits:
+Hub files are navigation only:
 - One short paragraph description
 - Contents list (one line per file)
 - Key Resources (one line per resource)
 - Ideas (one line per idea — user-managed only)
 
-No explanatory paragraphs. No multi-bullet concept sections. If content is more than one line, it needs its own concept file.
-
-**Default bias: create a new file.** Only touch a hub for navigation updates and one-line resource entries.
+**Default bias: create a new concept file.** Only touch a hub for navigation and one-line entries.
 
 ## How to Plant
 
-### Step 1 — Read the harvest document
+### Step 1 — Read the harvest
 
-Parse out: domain(s), category, tags, insights, resources, related projects, cross-references.
+Parse: domain(s), category, tags, insights, resources, cross-references.
 
 ### Step 2 — Read the current vault state
 
-Before writing, read:
-- The relevant subdomain hub (e.g. `computation/dsp/dsp.md`)
-- Any existing concept files that might overlap
-
-This prevents duplicating content already there.
+Read the relevant hub files and any existing concept files that might overlap. Prevents duplication.
 
 ### Step 3 — Decide what goes where
 
 | Content type | Action |
 |---|---|
-| Any named insight or concept | Create a new concept file in the subdomain folder |
-| Resource (book, tool, link) | One line in Key Resources of the subdomain hub |
-| Cross-domain concept | Create file in primary domain; add See Also link in secondary domain hub |
-| Philosophy / principle / approach | Create a file in `philosophy/` |
-| Related project | Add wiki-link to `## Related Concepts` in the relevant `projects/` file |
+| Any insight or concept | New concept file in the subdomain folder |
+| Resource | One line in Key Resources of subdomain hub |
+| Cross-domain concept | File in primary domain; See Also link in secondary domain hub |
+| Philosophy / principle / approach | New file in `philosophy/` |
 
-**Never add ideas unprompted. Only add an idea if the user explicitly asks.**
-**Never route full concepts or explanations into any hub file.**
+**Never add ideas unprompted.**
+**Never put explanatory content in hub files.**
 
 ### Step 4 — Write the files
 
-**Concept file template:**
+**Concept file:**
 ```markdown
 ---
 type: concept
-category: [computation/making/device/philosophy]
+category: [computation/making/philosophy]
 tags: [tag1, tag2]
+reference: [optional url]
 ---
 # Concept Name
 
-[Body — plain language, written for your future self after a long break.]
+Body — plain language, for your future self after a long break.
 
 ## Related Concepts
 - [[related-file]]
 - [[other-file]] — one line on why they relate
 ```
 
-**Hub update (navigation entries only):**
+**Hub update (navigation only):**
 ```markdown
 ## Contents
 - [[concept-filename|Concept Name]] — one-line description
@@ -129,42 +123,34 @@ tags: [tag1, tag2]
 - Title — Author — one-liner — expertise: beginner/intermediate/advanced
 ```
 
-**Project file — Related Concepts only:**
-```markdown
-## Related Concepts
-- [[concept-filename]] — one line on how it relates
-```
-Never edit frontmatter or description in project files — those are managed by script.
-
-**`philosophy/` hub specifically:**
-- One short paragraph: what this domain is and why it exists
+**`philosophy/` hub:**
+- One short paragraph only
 - Contents list linking to concept files
-- No principles written inline — those live in concept files
+- No principles written inline
 
 ### Step 5 — Confirm and suggest commit
 
-After writing, summarise what was created and updated, then tell the user:
+Summarise what was created and updated, then:
 
 > "Planted. Suggested commit: `plant: [topic] learnings`"
 
 Do not run git automatically.
 
-## Naming Conventions
+## Naming
 
 - Filenames: lowercase, hyphenated (`moog-ladder-filter.md`)
-- No spaces, no uppercase
-- Concept files always start with a `# Title` h1
-- Flat within subdomains — no subdirectories inside subdomain folders
+- Always start with `# Title` h1
+- Flat within subdomains — no nested subdirectories
 
 ## What Not to Plant
 
-- One-off experiments with no lasting insight
-- Content already in the vault — update instead of duplicating
-- Raw code dumps — extract the pattern only, link to the repo
-- Frontmatter or descriptions in project files
+- Common knowledge or beginner tutorial content
+- Content already in the vault — update instead
+- Raw code dumps — extract the pattern, link to the repo
+- Ideas unless explicitly requested
 
 ## Error Handling
 
-If the harvest references a subdomain that doesn't exist yet:
-- Check with the user before creating a new subdomain folder
-- If confirmed, create the folder with a fresh hub file and update the parent domain hub
+If the harvest references a subdomain that doesn't exist:
+- Ask before creating a new folder
+- If confirmed, create folder with hub file and update parent domain hub
