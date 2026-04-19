@@ -1,20 +1,23 @@
-# Principles and Philosophy
- 
-The core motivation and thinking behind how I learn and build things.
- 
-## First Principles
- 
-- **Ephemeralization** (Buckminster Fuller): Do more with less. Every project, tool, and decision should trend toward greater efficiency and elegance.
-- **Understanding whole systems**: Before solving a problem, understand the system it lives in.
-- **Make things**: Consuming knowledge is not learning. Building is learning.
- 
-## How I Approach Topics
- 
-1. Find the foundational texts — old books, canonical sources, not blog posts.
-2. Identify the key pillars of the topic before going deep.
-3. Start making something as early as possible.
-4. Use cross-references between domains — things connect in unexpected ways.
- 
-## On This Garden
- 
-This vault is a living memory of conversations, experiments, and learnings. It is fed by Claude Code sessions, research, and practice. It is not meant to be complete — it is meant to be useful.
+# Philosophy
+
+[tags: #philosophy #knowledge-management #epistemology #learning]
+
+The motivation and thinking behind how I learn and build. Overarching principles live in concept files; this page is a signpost to them.
+
+## Contents
+
+- [[finding-good-information|Finding Good Information]] — going upstream past algorithmic feeds
+- [[learning-strategies|Learning Strategies]] — foundational texts first, make early, triangulate
+
+## Key Resources
+
+- Whole Earth Catalog — Stewart Brand — structural model for organising domains of human knowledge — expertise: foundational
+- Whole Earth Field Guide — Caroline Maniaque-Benton — updated guide, useful for pressure-testing garden structure — expertise: foundational
+- Bauhaus / Black Mountain College — pedagogical models integrating craft, theory, and practice — expertise: reference
+- archive.org — source for old out-of-print foundational texts — expertise: all levels
+
+## Ideas
+
+- `ephemeralization.md` — Fuller's do more with less applied across software, hardware, and craft
+- `make-things.md` — building as the primary mode of learning, consumption as reference only
+- `whole-systems.md` — understanding the system a problem lives in before attacking the problem
