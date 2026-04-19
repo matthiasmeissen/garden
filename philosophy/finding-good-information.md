@@ -1,6 +1,10 @@
-# Finding Good Information
+---
+type: concept
+category: philosophy
+tags: [philosophy, knowledge-management, epistemology]
+---
 
-[tags: #philosophy #knowledge-management #epistemology]
+# Finding Good Information
 
 Finding foundational, actionable knowledge on the open internet is harder than it should be, and the difficulty is structural rather than accidental. Understanding the structure is the first step to working around it.
 
@@ -35,7 +39,7 @@ Over time this builds filters. You learn to smell marketing, to recognise when a
 
 Consumption alone cannot tell you which ideas are load-bearing. The final filter is practice: build something, hit the edges of what you know, and let the problems you run into tell you which resource actually helps. Resources that answer real questions earn their place. Resources that only sound good in the abstract fall away.
 
-## See Also
+## Related Concepts
 
 - [[philosophy|Philosophy Index]]
 - [[learning-strategies|Learning Strategies]] — how this approach fits into learning new topics

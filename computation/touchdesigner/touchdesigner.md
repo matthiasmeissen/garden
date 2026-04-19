@@ -1,6 +1,10 @@
-# TouchDesigner
+---
+type: hub
+category: computation
+tags: [touchdesigner]
+---
 
-[tags: #touchdesigner]
+# TouchDesigner
 
 TouchDesigner for realtime visuals and systems.
 

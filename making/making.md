@@ -1,6 +1,10 @@
-# Making
+---
+type: hub
+category: making
+tags: [making]
+---
 
-[tags: #making]
+# Making
 
 Hands-on craft — wood, electronics, sound.
 

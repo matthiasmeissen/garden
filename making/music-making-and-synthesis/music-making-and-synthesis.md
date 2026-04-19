@@ -1,6 +1,10 @@
-# Music Making and Synthesis
+---
+type: hub
+category: making
+tags: [synthesis]
+---
 
-[tags: #synthesis]
+# Music Making and Synthesis
 
 Music-making, synthesis, and sound design.
 

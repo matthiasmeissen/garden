@@ -1,6 +1,10 @@
-# AT Protocol
+---
+type: concept
+category: computation
+tags: [atproto, bluesky, open-social, web]
+---
 
-[tags: #atproto #bluesky #open-social #web]
+# AT Protocol
 
 Protocol for decentralised social data. Each user has a **personal data server (PDS)** — a web server storing signed JSON records at `at://` URIs. Records link to each other like hyperlinks. Apps read and write to your repo; they do not own your data.
 
@@ -30,6 +34,6 @@ Useful for debugging, exploring, or just seeing what any account's repo looks li
 - [pdsls.dev](https://pdsls.dev) — repo browser plus firehose / jetstream viewer
 - [atproto-browser.vercel.app](https://atproto-browser.vercel.app) — browse by handle or DID
 
-## See Also
+## Related Concepts
 
 - [[web|Web]]

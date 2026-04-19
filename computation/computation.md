@@ -1,6 +1,10 @@
-# Computation
+---
+type: hub
+category: computation
+tags: [computation]
+---
 
-[tags: #computation]
+# Computation
 
 Code, systems, and digital tooling.
 

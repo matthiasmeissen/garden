@@ -1,6 +1,10 @@
-# Game Engines
+---
+type: hub
+category: computation
+tags: [game-engines]
+---
 
-[tags: #game-engines]
+# Game Engines
 
 Game engines and interactive runtimes.
 

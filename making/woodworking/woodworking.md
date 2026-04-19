@@ -1,6 +1,10 @@
-# Woodworking
+---
+type: hub
+category: making
+tags: [woodworking]
+---
 
-[tags: #woodworking]
+# Woodworking
 
 Woodworking — tools, joinery, projects.
 

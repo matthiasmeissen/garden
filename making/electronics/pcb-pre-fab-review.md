@@ -1,6 +1,10 @@
-# PCB Pre-Fabrication Review
+---
+type: concept
+category: making
+tags: [pcb, electronics, eurorack]
+---
 
-[tags: #pcb #electronics #eurorack]
+# PCB Pre-Fabrication Review
 
 Checks to run before sending a board to fab. DRC catches a lot, but the items below are the ones DRC cannot see — or can see but silently tolerates. Worth walking through every time.
 
@@ -28,6 +32,6 @@ Electrically indifferent — the same current flows through every element in a s
 
 Export Gerber from EasyEDA — produces a ZIP containing copper, mask, silkscreen, outline, and drill files. Upload the ZIP directly to PCBWay's instant quote page; their system auto-detects dimensions and layer count. The rendered preview is the last checkpoint — visually verify it matches expectations before clicking order. Optionally open the Gerber ZIP in an independent viewer (PCBWay's, or `gerbview`) for a second pair of eyes.
 
-## See Also
+## Related Concepts
 
 - [[electronics|Electronics]]

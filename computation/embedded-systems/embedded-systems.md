@@ -1,6 +1,10 @@
-# Embedded Systems
+---
+type: hub
+category: computation
+tags: [embedded]
+---
 
-[tags: #embedded]
+# Embedded Systems
 
 Microcontrollers, firmware, real-time code.
 

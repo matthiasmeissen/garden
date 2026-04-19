@@ -1,6 +1,10 @@
-# Philosophy
+---
+type: hub
+category: philosophy
+tags: [philosophy, knowledge-management, epistemology, learning]
+---
 
-[tags: #philosophy #knowledge-management #epistemology #learning]
+# Philosophy
 
 The motivation and thinking behind how I learn and build. Overarching principles live in concept files; this page is a signpost to them.
 

@@ -1,6 +1,10 @@
-# Rust
+---
+type: hub
+category: computation
+tags: [rust]
+---
 
-[tags: #rust]
+# Rust
 
 Rust language, patterns, and projects.
 

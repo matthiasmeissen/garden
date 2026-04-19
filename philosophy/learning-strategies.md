@@ -1,6 +1,10 @@
-# Learning Strategies
+---
+type: concept
+category: philosophy
+tags: [philosophy, learning, epistemology]
+---
 
-[tags: #philosophy #learning #epistemology]
+# Learning Strategies
 
 How to approach a new topic so that time spent turns into real capability rather than a feeling of being informed.
 
@@ -32,7 +36,7 @@ No amount of reading will give you taste — the ability to tell a good approach
 
 In short: find the foundational texts, start making, let practice generate specific questions, return to the texts for answers, triangulate across sources, repeat. The loop is what produces understanding. Consumption alone, however well-sourced, does not.
 
-## See Also
+## Related Concepts
 
 - [[philosophy|Philosophy Index]]
 - [[finding-good-information|Finding Good Information]] — how to source the foundational texts this strategy depends on

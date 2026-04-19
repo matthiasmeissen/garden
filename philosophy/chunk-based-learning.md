@@ -1,6 +1,10 @@
-# Chunk-Based Learning
+---
+type: concept
+category: philosophy
+tags: [philosophy, learning, epistemology, systems-thinking]
+---
 
-[tags: #philosophy #learning #epistemology #systems-thinking]
+# Chunk-Based Learning
 
 A method for structuring a long-form learning effort by breaking a domain into natural knowledge units that build on each other, then working through them one at a time inside a longer time container. Evolved across three iterations of trying to learn hard subjects well.
 
@@ -40,7 +44,7 @@ In code-heavy domains, automatic chunk reviewers and skill generators (like Clau
 
 The chunk model maps naturally onto the garden vault structure — each chunk is roughly one concept file or subdomain hub. Planning a learning effort and planning the notes that come out of it can use the same skeleton.
 
-## See Also
+## Related Concepts
 
 - [[philosophy|Philosophy]]
 - [[learning-strategies|Learning Strategies]] — the strategic layer: foundational texts, making early, triangulating sources

@@ -1,6 +1,10 @@
-# DSP
+---
+type: hub
+category: computation
+tags: [dsp]
+---
 
-[tags: #dsp]
+# DSP
 
 Digital signal processing — filters, synthesis, analysis.
 

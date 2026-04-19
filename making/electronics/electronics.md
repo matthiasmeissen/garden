@@ -1,6 +1,10 @@
-# Electronics
+---
+type: hub
+category: making
+tags: [electronics]
+---
 
-[tags: #electronics]
+# Electronics
 
 Circuits, PCBs, and hardware projects.
 

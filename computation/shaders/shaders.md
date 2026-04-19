@@ -1,6 +1,10 @@
-# Shaders
+---
+type: hub
+category: computation
+tags: [shaders]
+---
 
-[tags: #shaders]
+# Shaders
 
 GPU shaders — fragment, vertex, compute.
 

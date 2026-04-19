@@ -1,6 +1,10 @@
-# Web
+---
+type: hub
+category: computation
+tags: [web]
+---
 
-[tags: #web]
+# Web
 
 Web platform — frontend, backend, protocols.
 
