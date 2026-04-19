@@ -5,18 +5,15 @@ description: Extract key learnings, concepts, resources, and ideas from a Claude
 
 # Garden Harvest
 
-Extract the signal from a conversation or working session and structure it for the garden vault.
+Distil a conversation down to what's genuinely worth keeping. Not a summary — a selection.
 
-## What This Skill Does
+## The Core Test
 
-Reads a conversation or session transcript and produces a structured markdown document containing:
-- Key concepts learned or clarified
-- Decisions made and the reasoning behind them
-- Resources mentioned (books, tools, links, papers)
-- Ideas and open questions that emerged
-- Cross-references to other garden domains
+Before including anything, ask: **"Would I already know this, or could I find it in five minutes?"**
 
-The output is ready to hand to `garden-plant` for vault insertion.
+If yes — drop it. Only include things that changed understanding, resolved a non-obvious question, or captured reasoning that would otherwise be lost.
+
+A good harvest is short. Typically 3–7 distilled insights, a few resources if any were found, a handful of ideas. If it's longer, it's still summarising rather than distilling.
 
 ## Garden Structure (for reference)
 
@@ -37,101 +34,82 @@ garden/
     electronics/electronics.md
     music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    philosophy.md                    <- domain hub, core principles and manifesto
+    philosophy.md                    <- domain hub
     finding-good-information.md      <- example concept file
     [other concept files...]
 ```
 
-**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`, not `rust/_index.md`). This makes Obsidian graph nodes readable.
+**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`).
 
-**Domain tags to use:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
+**Domain tags:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
 
 ## How to Harvest
 
 ### Step 1 — Read the input
 
 The user will either:
-- Paste a conversation transcript directly
 - Say "harvest this conversation" (meaning the current session)
-- Reference a topic/session they just finished
+- Paste a transcript from another session
 
-If the input is ambiguous, ask: "Should I harvest the current conversation, or do you have a transcript to paste?"
+If ambiguous, ask: "Should I harvest the current conversation, or do you have a transcript to paste?"
 
 ### Step 2 — Identify the domain(s)
 
-Map the content to one or more garden domains. A session on Moog ladder filters touches both `computation/dsp` and `making/music-making-and-synthesis`. A session on how to find good learning resources belongs in `philosophy/`. Flag cross-domain content explicitly.
+Map the content to one or more garden domains. Flag cross-domain content explicitly.
 
-### Step 3 — Extract with intention
+### Step 3 — Distil ruthlessly
 
-Pull out only what has lasting value. Ignore conversational filler, dead ends, and things that were corrected later. Focus on:
+Read the whole session. Then ask: what here would be genuinely useful to know six months from now, to someone who already understands the basics of this topic?
 
-- **Concepts**: Things that were explained, clarified, or understood for the first time
-- **Decisions**: Choices made and why (e.g. "chose TPT approach over bilinear because...")
-- **Code patterns**: Reusable patterns, idioms, or architecture decisions
-- **Resources**: Books, papers, crates, tools, YouTube channels, links — with expertise level if mentioned
-- **Ideas**: Things to explore later, open questions, "what if" thoughts
-- **Warnings**: Gotchas, failure modes, things that don't work
+**Keep:**
+- Insights that required reasoning to arrive at — not things obvious or easily Googled
+- Decisions with non-obvious reasoning ("chose X over Y because Z")
+- Patterns or approaches that took effort to figure out
+- Resources that are hard to find or specifically recommended
+- Ideas concrete enough to act on
+
+**Drop:**
+- Anything conversational or exploratory that didn't land anywhere
+- Concepts that are common knowledge in the domain
+- Things that were tried and corrected mid-session
+- Anything a beginner's tutorial would cover
+- Structural decisions about the garden itself
 
 ### Step 4 — Produce the harvest document
-
-Output a markdown document in this exact format:
-
----
 
 ```markdown
 # Harvest: [Topic] — [YYYY-MM-DD]
 
 ## Domain
 [primary domain path, e.g. computation/dsp]
-[secondary domain path if cross-domain, e.g. making/music-making-and-synthesis]
+[secondary domain if cross-domain]
 
 ## Tags
-[space-separated tags, e.g. #dsp #rust #filters #synthesis]
+[space-separated, e.g. #dsp #rust #filters]
 
-## Key Concepts
+## Distilled Insights
 
-- **[Concept name]**: [1-3 sentence explanation in plain language]
-- **[Concept name]**: ...
-
-## Decisions & Reasoning
-
-- **[Decision]**: [Why this was chosen over alternatives]
-
-## Code Patterns
-
-[Only include if session contained code worth preserving]
-
-```[language]
-// brief comment explaining what this does
-[minimal illustrative code snippet]
-```
+- **[Insight name]**: [1–2 sentences. Plain language. Written for your future self after a long break.]
 
 ## Resources
 
-- [Title] — [Author/Source] — [brief note on what it covers] — expertise: [beginner/intermediate/advanced]
+- [Title] — [Author] — [why it's worth reading] — expertise: [beginner/intermediate/advanced]
 
-## Ideas & Open Questions
+## Ideas
 
-- [idea or question]
+- [concrete, actionable idea or open question]
 
 ## Cross-References
 
-- Relates to: [other garden domain or concept]
+- Relates to: [other domain/file] — [one line on why]
 ```
 
----
-
-## What to Leave Out
-
-- Long code dumps (reference the repo instead)
-- Things that were tried and abandoned without insight
-- Conversational back-and-forth that didn't produce knowledge
-- Anything already well-documented in the garden
+Omit any section that has nothing worth adding. An empty Resources section is better than a padded one.
 
 ## Tone
 
-Write concepts in plain language as if explaining to your future self after a long break. Assume you've forgotten the details but not the context.
+Write as if leaving a note for yourself after a long break. Assume you remember the context but have forgotten the specifics. Be direct — no preamble, no "in this session we explored...".
 
 ## After Harvesting
 
-Tell the user: "Here's your harvest. You can now use `garden-plant` inside the garden repo to write this into the vault."
+Tell the user: "Here's your harvest. Use `garden-plant` inside the garden repo to write this into the vault."
