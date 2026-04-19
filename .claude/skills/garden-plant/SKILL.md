@@ -84,11 +84,11 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 |---|---|
 | Any named concept, approach, or idea with more than a sentence to say | Create a new concept file |
 | Resource (book, tool, link) | One line in Key Resources of the relevant subdomain hub (e.g. `dsp/dsp.md`) |
-| Idea or open question | One line in Ideas of the relevant subdomain hub |
 | Cross-domain concept | Create file in primary domain; add See Also link in secondary domain hub |
 | Philosophy / principle / approach | Create a file in `philosophy/` — e.g. `philosophy/finding-good-information.md` |
 | Core vault description or "about" content | `philosophy/philosophy.md` one-paragraph description only |
 
+**Never add ideas on behalf of the user. Ideas are personal intent and are always added manually.**
 **Never route full concepts, explanations, or multi-bullet sections into any hub file.**
 
 ### Step 4 — Write the files
@@ -113,9 +113,6 @@ Default bias: **create a new file**. Only touch an index for navigation updates,
 
 ## Key Resources
 - Title — Author — one-liner — expertise: beginner/intermediate/advanced
-
-## Ideas
-- one-line idea or open question
 ```
 
 **`philosophy/philosophy.md` specifically:**

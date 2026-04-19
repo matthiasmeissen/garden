@@ -66,7 +66,6 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 - Decisions with non-obvious reasoning ("chose X over Y because Z")
 - Patterns or approaches that took effort to figure out
 - Resources that are hard to find or specifically recommended
-- Ideas concrete enough to act on
 
 **Drop:**
 - Anything conversational or exploratory that didn't land anywhere
@@ -74,6 +73,7 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 - Things that were tried and corrected mid-session
 - Anything a beginner's tutorial would cover
 - Structural decisions about the garden itself
+- Ideas, next steps, or things to investigate — those are personal intent, added manually by the user
 
 ### Step 4 — Produce the harvest document
 
@@ -95,16 +95,12 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 
 - [Title] — [Author] — [why it's worth reading] — expertise: [beginner/intermediate/advanced]
 
-## Ideas
-
-- [concrete, actionable idea or open question]
-
 ## Cross-References
 
 - Relates to: [other domain/file] — [one line on why]
 ```
 
-Omit any section that has nothing worth adding. An empty Resources section is better than a padded one.
+Omit any section that has nothing worth adding. No Ideas section — ideas are added manually by the user directly in the vault.
 
 ## Tone
 

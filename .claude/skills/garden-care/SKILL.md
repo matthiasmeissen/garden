@@ -76,8 +76,9 @@ Check for each of the following issues:
 - Files significantly over 2000 words that could be split into two focused files
 
 **Stale ideas**
-- Ideas that have been sitting in indexes and are substantial enough to become concept files
-- Ideas that are too vague to ever act on and should be dropped
+- Ideas are added manually by the user and should not be touched by plant or harvest
+- Care may flag ideas that have grown into full concept files already (i.e. the idea was acted on and a file now exists) so the idea entry can be cleaned up
+- Never remove or rewrite ideas — only flag them for the user to decide
 
 **Inconsistent tags**
 - Similar concepts tagged differently across files (e.g. `#synthesis` vs `#synth`)
@@ -134,14 +135,11 @@ Not linked from `computation/shaders/shaders.md`.
 
 ---
 
-## Stale Ideas
+## Ideas to Review
 
-### computation/dsp/_index.md — Ideas section
-- "Build a node-based UI in Rust" — substantial enough to become a concept file
-→ Proposed: create `computation/rust/node-graph-ui.md`, remove from ideas
-
-- "Look into waveguide synthesis sometime" — too vague
-→ Proposed: drop it, or rewrite as a concrete next action
+### computation/dsp/dsp.md — Ideas section
+- "Build a node-based UI in Rust" — a concept file already exists at `computation/rust/node-graph-ui.md`
+→ Proposed: remove the idea entry since it has been acted on
 
 ---
 
