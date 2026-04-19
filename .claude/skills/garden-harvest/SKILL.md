@@ -11,9 +11,9 @@ Distil a conversation down to what's genuinely worth keeping. Not a summary — 
 
 Before including anything, ask: **"Would I already know this, or could I find it in five minutes?"**
 
-If yes — drop it. Only include things that changed understanding, resolved a non-obvious question, or captured reasoning that would otherwise be lost.
+Only include things that changed understanding, resolved a non-obvious question, or captured reasoning that would otherwise be lost.
 
-A good harvest is short. Typically 3–7 distilled insights, a few resources if any were found, a handful of ideas. If it's longer, it's still summarising rather than distilling.
+A good harvest is short. Typically 3–7 distilled insights, a few resources if any were found. If it's longer, it's still summarising rather than distilling.
 
 ## Garden Structure (for reference)
 
@@ -35,13 +35,14 @@ garden/
     music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
     philosophy.md                    <- domain hub
-    finding-good-information.md      <- example concept file
-    [other concept files...]
+    [concept files...]
+  projects/
+    [one .md per project, thin wrappers — do not harvest into these]
 ```
 
-**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`).
+**Categories:** `computation` / `making` / `device` / `philosophy`
 
-**Domain tags:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
+**Tags:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
 
 ## How to Harvest
 
@@ -73,7 +74,7 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 - Things that were tried and corrected mid-session
 - Anything a beginner's tutorial would cover
 - Structural decisions about the garden itself
-- Ideas, next steps, or things to investigate — never infer these unprompted; only add if the user explicitly asks. An idea is a concrete future action ("build X", "learn Y", "order Z") — distinct from an insight, which is something already understood.
+- Ideas, next steps, or things to investigate — never infer these unprompted. An idea is a concrete future action ("build X", "learn Y", "order Z") — distinct from an insight.
 
 ### Step 4 — Produce the harvest document
 
@@ -83,6 +84,9 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 ## Domain
 [primary domain path, e.g. computation/dsp]
 [secondary domain if cross-domain]
+
+## Category
+[computation / making / device / philosophy]
 
 ## Tags
 [space-separated, e.g. #dsp #rust #filters]
@@ -95,12 +99,16 @@ Read the whole session. Then ask: what here would be genuinely useful to know si
 
 - [Title] — [Author] — [why it's worth reading] — expertise: [beginner/intermediate/advanced]
 
+## Related Projects
+
+- [project-key] — [one line on how it relates]
+
 ## Cross-References
 
 - Relates to: [other domain/file] — [one line on why]
 ```
 
-Omit any section that has nothing worth adding. No Ideas section — ideas are added manually by the user directly in the vault.
+Omit any section that has nothing worth adding. No Ideas section — ideas are added by the user directly.
 
 ## Tone
 

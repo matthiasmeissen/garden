@@ -17,84 +17,76 @@ This skill runs inside the `garden/` repo via Claude Code. It has filesystem acc
 garden/
   computation/
     computation.md                        <- domain hub
-    rust/rust.md                          <- subdomain hub
-    embedded-systems/embedded-systems.md
-    dsp/dsp.md
-    shaders/shaders.md
-    touchdesigner/touchdesigner.md
-    game-engines/game-engines.md
+    rust/rust.md        embedded-systems/embedded-systems.md   dsp/dsp.md
+    shaders/shaders.md  touchdesigner/touchdesigner.md         game-engines/game-engines.md
     web/web.md
   making/
-    making.md                             <- domain hub
-    woodworking/woodworking.md
-    electronics/electronics.md
-    music-making-and-synthesis/music-making-and-synthesis.md
+    making.md
+    woodworking/woodworking.md   electronics/electronics.md   music-making-and-synthesis/music-making-and-synthesis.md
   philosophy/
-    philosophy.md                         <- domain hub
+    philosophy.md
     [concept files]
+  projects/
+    [thin wrappers — data managed by script, only Related Concepts section is editable]
 ```
 
-**Hub file naming:** Every folder has one hub file named after the folder itself (e.g. `rust/rust.md`). Hub files are navigation only — not content files.
+**Hub file naming:** Every folder has one hub file named after the folder (e.g. `rust/rust.md`). Never `_index.md`.
+
+**Categories:** `computation` / `making` / `device` / `philosophy`
 
 ## Scope
 
-The user may ask to care for the whole vault or a specific section:
+If no scope is given, ask: "Should I review the whole garden, or a specific section?"
 
 - "Care for the whole garden" → scan everything
 - "Care for philosophy/" → scan only that folder
 - "Care for computation/dsp" → scan only that subdomain
 
-If no scope is given, ask: "Should I review the whole garden, or a specific section?"
+Never scan or modify `projects/` frontmatter or descriptions — those are script-managed.
 
 ## How to Care
 
 ### Step 1 — Read the scope
 
-Read all files within the requested scope. Build a mental map of:
-- What files exist and what they contain
-- What each `_index.md` links to
-- What tags are in use
+Read all files within the requested scope. Build a map of what exists, what hubs link to, and what tags are in use.
 
 ### Step 2 — Run the checks
 
-Check for each of the following issues:
+**Missing or malformed frontmatter**
+- Every file should have YAML frontmatter with `type`, `category`, and `tags`
+- Hub files: `type: hub`, Concept files: `type: concept`
 
 **Bloated hub files**
-- Any hub file (e.g. `dsp/dsp.md`, `philosophy/philosophy.md`) containing explanatory paragraphs, multi-bullet concept sections, or "How I approach X" content
-- Hub files should only contain: one-paragraph description, contents list, key resources (one line each), ideas (one line each)
+- Any hub containing explanatory paragraphs, multi-bullet concept sections, or "How I approach X" content
+- Hubs should only contain: one short paragraph, contents list, key resources (one line each), ideas (one line each)
 
 **Duplicate or overlapping content**
 - Two or more files covering the same concept
-- Content in an index that duplicates a concept file
-- Harvests from different sessions that landed in the same place and now repeat each other
+- Content in a hub that duplicates a concept file
 
 **Orphaned files**
 - Concept files not linked from any hub file
-- Files with no tags and no See Also links
+- Files with no tags and no Related Concepts links
 
 **Oversized concept files**
 - Files significantly over 2000 words that could be split into two focused files
 
 **Ideas to review**
-- An idea is a concrete future action — something to build, learn, make, or acquire (e.g. "build an injection moulding machine", "learn about LoRa networks")
-- Ideas are added by the user only, never by Claude unprompted
-- Care may flag idea entries where a concept file already exists for that topic, so the user can decide to remove the now-redundant idea entry
-- Never rewrite, remove, or add ideas — only flag them for the user to decide
+- An idea is a concrete future action ("build X", "learn Y", "order Z") — added by user only
+- Flag idea entries where a concept file already exists for that topic (acted on)
+- Never rewrite, remove, or add ideas — only flag for the user to decide
 
 **Inconsistent tags**
-- Similar concepts tagged differently across files (e.g. `#synthesis` vs `#synth`)
-- Tags used only once that might be redundant
+- Similar concepts tagged differently (e.g. `synthesis` vs `synth`)
+- Flag for standardisation — don't change without approval
 
 **Missing cross-references**
-- Concept files in different domains that clearly relate but have no See Also links between them
+- Concept files in different domains that clearly relate but have no Related Concepts links between them
+
+**Project files with no Related Concepts**
+- Flag projects that have no concept links yet — these are opportunities to connect the vault
 
 ### Step 3 — Produce the care report
-
-Output a structured report grouped by issue type. For each issue, show exactly what the proposed change is. Keep it scannable — the user should be able to read it quickly and decide what to approve.
-
-Format:
-
----
 
 ```markdown
 # Garden Care Report — [scope] — [YYYY-MM-DD]
@@ -104,19 +96,27 @@ Format:
 
 ---
 
+## Missing Frontmatter
+
+### computation/dsp/filter-types.md
+No frontmatter found.
+→ Proposed: add frontmatter with type: concept, category: computation, tags: [dsp]
+
+---
+
 ## Bloated Hub Files
 
 ### philosophy/philosophy.md
-The "First Principles" section (8 bullet points) and "How I Approach Topics" section should move to concept files.
-→ Proposed: extract to `philosophy/ephemeralization.md` and `philosophy/learning-strategies.md`, replace with hub entries
+"First Principles" section (8 bullet points) should be a concept file.
+→ Proposed: extract to `philosophy/ephemeralization.md`, replace with hub entry
 
 ---
 
 ## Duplicates & Overlap
 
 ### computation/dsp/dsp.md + computation/dsp/filters.md
-The hub contains a full explanation of filter types that duplicates filters.md.
-→ Proposed: remove the explanation from the hub, keep the link
+Hub contains a full explanation of filter types that duplicates filters.md.
+→ Proposed: remove explanation from hub, keep the link
 
 ---
 
@@ -128,34 +128,34 @@ Not linked from `computation/shaders/shaders.md`.
 
 ---
 
-## Oversized Files
-
-### philosophy/finding-good-information.md
-~3200 words. Covers both the problem (algorithmic bias) and the solution (upstream sources).
-→ Proposed: split into `finding-good-information.md` (the approach) and `algorithmic-incentives.md` (the problem)
-
----
-
 ## Ideas to Review
 
 ### computation/dsp/dsp.md — Ideas section
-- "Build a node-based UI in Rust" — a concept file already exists at `computation/rust/node-graph-ui.md`
+- "Build a node-based UI in Rust" — concept file already exists at `computation/rust/node-graph-ui.md`
 → Proposed: remove the idea entry since it has been acted on
 
 ---
 
 ## Inconsistent Tags
 
-- `#synthesis` (used in 4 files) and `#synth` (used in 2 files) — same concept
-→ Proposed: standardise to `#synthesis` across all files
+- `synthesis` (4 files) and `synth` (2 files) — same concept
+→ Proposed: standardise to `synthesis`
 
 ---
 
 ## Missing Cross-References
 
-### computation/dsp/ ↔ making/music-making-and-synthesis/
-Several DSP concept files relate directly to synthesis files but have no See Also links.
-→ Proposed: add cross-references in [list of specific files]
+### computation/dsp/ <-> making/music-making-and-synthesis/
+Several DSP files relate to synthesis files but have no Related Concepts links.
+→ Proposed: add links in [specific files]
+
+---
+
+## Project Files With No Related Concepts
+
+### projects/dsp-playground.md
+No concept links yet.
+→ Flag: consider linking [[moog-ladder-filter]], [[tpt-approach]] when those files exist
 
 ---
 
@@ -165,8 +165,6 @@ Several DSP concept files relate directly to synthesis files but have no See Als
 [ ] Only: [user specifies]
 [ ] Skip: [user specifies]
 ```
-
----
 
 ### Step 4 — Wait for approval
 
@@ -178,21 +176,16 @@ Do not make any changes until the user responds.
 
 ### Step 5 — Apply approved changes
 
-Once approved, make only the changes the user confirmed. After completing:
-- Summarise what was done (files created, updated, removed)
-- Suggest a commit: `git commit -m "care: [brief description of what was tidied"`
+After completing:
+- Summarise what was done
+- Suggest commit: `git commit -m "care: [brief description]"`
 
-Do not run git automatically — leave committing to the user.
+Do not run git automatically.
 
 ## What Garden Care Never Does
 
 - Deletes files without explicit approval
-- Merges files without showing the merged content first
+- Merges files without showing merged content first
 - Changes content meaning — only structure and organisation
-- Acts on unapproved items even if they seem obvious
-
-## Edge Cases
-
-- If a file seems important but is orphaned, flag it rather than quietly linking it — the user may have intentionally left it unlinked
-- If two files overlap significantly, show both before proposing a merge so the user can see what would be lost
-- If an idea in an index is ambiguous (keep as idea vs. make a file vs. drop), ask rather than decide
+- Edits project file frontmatter or descriptions
+- Adds or removes ideas — only flags them
