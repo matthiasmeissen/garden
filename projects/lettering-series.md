@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [oculus-medium, vr, lettering, visual, 3d]
+tags: [oculus-medium, lettering, visual]
 reference: Dropbox
 ---
 

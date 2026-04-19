@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [three-js, javascript, visual, 3d]
+tags: [three-js, javascript, visual]
 reference: https://github.com/matthiasmeissen/three-playgrounds
 ---
 

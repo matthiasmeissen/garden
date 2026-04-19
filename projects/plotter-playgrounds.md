@@ -1,7 +1,7 @@
 ---
 type: practice
 category: making
-tags: [plotter, svg, drawing, visual]
+tags: [plotter, drawing, visual]
 reference: https://github.com/matthiasmeissen/plotter-playgrounds
 ---
 

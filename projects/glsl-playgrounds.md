@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [glsl, shader, visual]
+tags: [glsl, visual]
 reference:
   - https://github.com/matthiasmeissen/glsl-playgrounds
   - https://github.com/matthiasmeissen/glsl-playgrounds-2

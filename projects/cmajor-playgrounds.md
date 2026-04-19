@@ -7,7 +7,7 @@ reference: https://github.com/matthiasmeissen/cmajor-playgrounds
 
 # Cmajor Playgrounds
 
-Learn how to use cmajor.
+Learn how to use csound.
 
 ## Related concepts
 

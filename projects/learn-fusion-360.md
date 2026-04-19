@@ -1,7 +1,7 @@
 ---
 type: practice
 category: making
-tags: [fusion-360, cad, object]
+tags: [fusion-360, object]
 reference: Cloud
 ---
 

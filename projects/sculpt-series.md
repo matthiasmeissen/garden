@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [nomad-sculpt, blender, visual, 3d]
+tags: [nomad-sculpt, blender, visual]
 reference: Dropbox
 ---
 

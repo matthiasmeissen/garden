@@ -1,7 +1,7 @@
 ---
 type: project
 category: computation
-tags: [touchdesigner, visual, vj]
+tags: [touchdesigner, visual]
 reference: Dropbox
 ---
 

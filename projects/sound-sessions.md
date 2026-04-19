@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [ableton, audio, music]
+tags: [ableton, audio]
 reference: Dropbox
 ---
 

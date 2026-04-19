@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [c, programming-language]
+tags: [c]
 reference: https://github.com/matthiasmeissen/c-playgrounds
 ---
 

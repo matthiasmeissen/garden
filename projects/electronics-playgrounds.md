@@ -1,7 +1,7 @@
 ---
 type: practice
 category: making
-tags: [electronics, circuit]
+tags: [electronics]
 reference: https://github.com/matthiasmeissen/electronics-playgrounds
 ---
 

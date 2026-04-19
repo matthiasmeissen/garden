@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [pixel-art, drawing, visual]
+tags: [drawing, visual, aseprite]
 reference: Dropbox
 ---
 

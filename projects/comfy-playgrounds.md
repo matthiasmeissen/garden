@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [comfyui, ai-image, visual]
+tags: [comfyui, visual]
 reference: https://github.com/matthiasmeissen/comfy-playgrounds
 ---
 

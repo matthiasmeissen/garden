@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [rust, embassy, embedded, micro-bit, rp2350, electronics]
+tags: [rust, embedded, micro-bit, electronics]
 reference: https://github.com/matthiasmeissen/embedded-rust-playgrounds
 ---
 

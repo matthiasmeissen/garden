@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [rust, programming-language]
+tags: [rust]
 reference: https://github.com/matthiasmeissen/rust-playgrounds
 ---
 

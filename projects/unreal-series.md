@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [unreal, visual, 3d]
+tags: [unreal, visual]
 reference: Dropbox
 ---
 

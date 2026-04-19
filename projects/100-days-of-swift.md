@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [swift, ios, programming-language]
+tags: [swift]
 reference: https://github.com/matthiasmeissen/100-days-of-swift
 ---
 

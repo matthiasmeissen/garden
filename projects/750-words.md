@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [writing, text]
+tags: [writing]
 reference:
   - https://github.com/matthiasmeissen/750-words
   - https://github.com/matthiasmeissen/750-words-2

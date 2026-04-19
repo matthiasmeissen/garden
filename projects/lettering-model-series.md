@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [cinema-4d, lettering, visual, 3d]
+tags: [cinema-4d, lettering, visual]
 reference: Dropbox
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: project
 category: device
-tags: [rust, raspberry-pi, audio, visual, synthesis, pcb, enclosure]
+tags: [rust, raspberry-pi, audio, visual, synthesis, pcb]
 reference: https://github.com/matthiasmeissen/oxide
 ---
 

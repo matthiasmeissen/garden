@@ -1,7 +1,7 @@
 ---
 type: practice
 category: making
-tags: [drawing, marker, a2, visual]
+tags: [drawing, visual]
 reference: Physical
 ---
 

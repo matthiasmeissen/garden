@@ -1,10 +1,10 @@
 # Projects
 
-All active practices and one-off projects, as a graph-navigable index.
+All active practices and one-off projects as graph-navigable nodes.
 
 ## How to use
 
-Each project is a node. Link to a project from any concept note using `[[project-name]]` to build connections in the graph view.
+Link to any project from a concept note using `[[project-slug]]`. Obsidian's graph and backlinks pane will surface the connections.
 
 ## Schema
 
@@ -14,4 +14,4 @@ Each project is a node. Link to a project from any concept note using `[[project
 
 ## Source of truth
 
-Canonical project data lives in `github.com/matthiasmeissen/projects/projects.json` with activity dates. These markdown files mirror the schema for Obsidian graph purposes; bodies are for concept links, not project metadata.
+Canonical project data lives in `github.com/matthiasmeissen/projects/projects.json`. These markdown files are regenerated from it via `export_projects.py`.

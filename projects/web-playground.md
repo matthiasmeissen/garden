@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [javascript, html, css, web]
+tags: [javascript]
 reference: https://github.com/matthiasmeissen/web-playgrounds
 ---
 

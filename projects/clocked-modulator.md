@@ -1,7 +1,7 @@
 ---
 type: project
 category: device
-tags: [rust, embassy, embedded, rp2350, midi, audio, eurorack, easyeda, pcb]
+tags: [rust, embassy, embedded, rp2350, midi, easyeda, pcb]
 reference: https://github.com/matthiasmeissen/clocked-modulator
 ---
 

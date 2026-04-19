@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [gravity-sketch, blender, visual, 3d]
+tags: [gravity-sketch, blender, visual]
 reference: Dropbox
 ---
 

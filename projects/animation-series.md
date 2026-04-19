@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [touchdesigner, visual, animation]
+tags: [touchdesigner, visual]
 reference: Dropbox
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: practice
 category: making
-tags: [houdini, rhino, grasshopper, freecad, 3d-printing, cad, parametric, object]
+tags: [houdini, rhino, grasshopper, freecad, 3d-printing, object]
 reference: Dropbox
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: practice
 category: computation
-tags: [vcv, cpp, audio, modular-synth, synthesis]
+tags: [vcv, cpp, audio, synthesis]
 reference: https://github.com/matthiasmeissen/vcv-playgrounds
 ---
 
