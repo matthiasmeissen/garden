@@ -1,23 +1,23 @@
 ---
 name: garden-plant
-description: Take a harvested markdown document (produced by garden-harvest) and generate precise instructions for inserting it into the garden knowledge vault. Tells an LLM or the user exactly which files to create or update, what content to add, and what cross-references to make. Use this skill whenever the user says "plant this in my garden", "add this to the vault", "where does this go in my garden", or pastes a harvest document and wants to know how to integrate it. Also trigger after garden-harvest completes, when the user is ready to commit learnings to the vault. Trigger liberally — if the user has a harvest document and wants to get it into their garden, this is the right tool.
+description: Take a harvested markdown document (produced by garden-harvest) and directly write it into the garden knowledge vault. Reads existing vault files, creates new concept files, updates _index.md hubs, and adds cross-references — all using file tools. Use this skill whenever the user says "plant this in my garden", "add this to the vault", "plant this", or pastes a harvest document and wants it committed to the vault. Also trigger after garden-harvest completes when the user is ready to save learnings. This skill is designed to run inside the garden repo via Claude Code — it acts directly on files, not just produces instructions. Trigger liberally — if the user has a harvest document and wants it in the vault, this is the right tool.
 ---
 
 # Garden Plant
 
-Turn a harvest document into precise vault insertion instructions.
+Read a harvest document and write it directly into the garden vault using file tools.
 
-## What This Skill Does
+## Context
 
-Reads a harvest document and produces a step-by-step instruction set for populating the garden vault. The output is designed to be handed directly to Claude Code (or another LLM with file access) to execute, or followed manually.
+This skill runs inside the `garden/` repo via Claude Code. It has filesystem access. It does not produce instructions for a human to follow — it reads, creates, and edits files directly.
 
-## Garden Structure (for reference)
+## Garden Structure
 
 ```
 garden/
-  principles-and-philosophy.md      ← philosophy, first principles only
+  principles-and-philosophy.md      ← philosophy and first principles only
   computation/
-    _index.md                        ← table of contents + ideas for computation
+    _index.md                        ← table of contents + ideas
     rust/_index.md
     embedded-systems/_index.md
     dsp/_index.md
@@ -26,97 +26,93 @@ garden/
     game-engines/_index.md
     web/_index.md
   making/
-    _index.md                        ← table of contents + ideas for making
+    _index.md                        ← table of contents + ideas
     woodworking/_index.md
     electronics/_index.md
     music-making-and-synthesis/_index.md
 ```
 
 **File rules:**
-- Max 3 levels deep
-- One concept per file (500–2000 words ideal)
-- `_index.md` files are hubs — update them when adding new concept files
-- Tags connect across domains — use them liberally
+- Max 3 levels deep — never go deeper
+- One concept per file, 500–2000 words ideal
+- `_index.md` files are hubs — always update them when adding concept files
+- Tags connect across domains — use them in every file
 
 ## How to Plant
 
 ### Step 1 — Read the harvest document
 
-Identify: domain(s), tags, concepts, resources, ideas, cross-references.
+Parse out: domain(s), tags, concepts, decisions, resources, ideas, cross-references.
 
-### Step 2 — Decide what goes where
+### Step 2 — Read the current vault state
 
-For each piece of content in the harvest:
+Before writing anything, read the relevant existing files:
+- The domain `_index.md` (e.g. `computation/_index.md`)
+- The subdomain `_index.md` (e.g. `computation/dsp/_index.md`)
+- Any existing concept files that might overlap with what you're planting
 
-| Content type | Where it goes |
+This prevents duplicating content that's already there.
+
+### Step 3 — Decide what goes where
+
+| Content type | Action |
 |---|---|
-| New concept worth its own file | New file in the relevant subdomain folder |
-| Small concept or clarification | Append to existing concept file, or add to `_index.md` |
-| Resource (book, tool, link) | Key Resources section of the relevant `_index.md` |
-| Idea or open question | Ideas section of the relevant `_index.md` |
-| Cross-domain concept | Primary domain gets the file; secondary domain `_index.md` gets a cross-reference link |
-| First-principles insight | `principles-and-philosophy.md` |
+| New concept worth its own file | Create new file in subdomain folder, update subdomain `_index.md` |
+| Small concept or clarification | Append to existing concept file, or add inline to subdomain `_index.md` |
+| Resource (book, tool, link) | Add to Key Resources in subdomain `_index.md` |
+| Idea or open question | Add to Ideas in subdomain `_index.md` |
+| Cross-domain concept | Create file in primary domain; add See Also link in secondary domain `_index.md` |
+| First-principles insight | Append to `principles-and-philosophy.md` |
 
-### Step 3 — Produce insertion instructions
+### Step 4 — Write the files
 
-Output a clear instruction block formatted for an LLM or human to execute. Use this format:
+**Creating a new concept file:**
+```
+# Concept Name
 
----
+[tags: #tag1 #tag2]
 
-```markdown
-# Plant Instructions: [Topic] — [YYYY-MM-DD]
+[body: 500–2000 words, plain language, written for your future self after a long break]
 
-## Summary
-[1-2 sentences: what this harvest contains and where it's going]
-
-## Files to Create
-
-### [domain/subdomain/concept-name.md]
-Create this file with the following content:
-
-[full markdown content of the new file]
-
----
-
-## Files to Update
-
-### [domain/subdomain/_index.md]
-In the **Key Resources** section, add:
-- [resource entry]
-
-In the **Ideas** section, add:
-- [idea entry]
-
-In the **table of contents**, add:
-- [[concept-name|Concept Name]]
-
----
-
-## Cross-References to Add
-
-In [domain-a/subdomain/_index.md], add under a "See Also" section:
-- [[../../domain-b/subdomain/concept-name|Concept Name]] — [one line on why they relate]
-
----
-
-## Tags Used
-[list all tags applied in this plant operation]
+## See Also
+- [[../_index|Domain Index]]
+- [[../../other-domain/subdomain/concept|Related Concept]] — why they relate
 ```
 
----
+**Updating a subdomain `_index.md`:**
+- Add new concept files to the table of contents as `[[filename|Display Name]]`
+- Add resources to Key Resources: `- Title — Author — one-liner — expertise: beginner/intermediate/advanced`
+- Add ideas to Ideas as bullet points
+- Add a See Also section if cross-references exist
+
+**Updating `principles-and-philosophy.md`:**
+- Append new principles as concise bullet points under the relevant section
+- Don't duplicate existing principles — read first
+
+### Step 5 — Confirm and suggest commit
+
+After writing all files, summarise what was planted (files created, files updated) and tell the user:
+
+> "Planted. Suggested commit: `plant: [topic] learnings`"
+
+Do not run git automatically — leave committing to the user.
 
 ## Naming Conventions
 
-- File names: lowercase, hyphenated, descriptive (`moog-ladder-filter.md`, not `filter.md`)
-- Concept files start with a `# Title` h1
-- Keep the structure flat within subdomains — no deeper nesting
+- File names: lowercase, hyphenated, descriptive (`moog-ladder-filter.md` not `filter.md`)
+- No spaces, no uppercase in filenames
+- Concept files always start with a `# Title` h1
+- Keep structure flat within subdomains — no subdirectories inside subdomain folders
 
 ## What Not to Plant
 
-- Don't create files for one-off experiments with no lasting insight
-- Don't duplicate content already in the vault — update existing files instead
-- Don't add raw code dumps — link to the repo and extract only the pattern
+- One-off experiments with no lasting insight
+- Content already in the vault — update instead of duplicating
+- Raw code dumps — extract the pattern only, link to the repo for full code
+- Conversational filler from the harvest
 
-## After Planting
+## Error Handling
 
-Tell the user: "Here are your plant instructions. Hand these to Claude Code with access to your garden repo, or apply them manually. After planting, commit with a message like `plant: [topic] learnings`."
+If the harvest document references a subdomain that doesn't exist yet (e.g. `computation/faust/`):
+- Check with the user before creating a new subdomain folder
+- If confirmed, create the folder with a fresh `_index.md` and update the parent domain `_index.md`
