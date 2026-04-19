@@ -36,3 +36,4 @@ In short: find the foundational texts, start making, let practice generate speci
 
 - [[philosophy|Philosophy Index]]
 - [[finding-good-information|Finding Good Information]] — how to source the foundational texts this strategy depends on
+- [[chunk-based-learning|Chunk-Based Learning]] — the methodological layer for applying these strategies over a long learning effort

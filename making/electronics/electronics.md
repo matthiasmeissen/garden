@@ -15,4 +15,3 @@ Circuits, PCBs, and hardware projects.
 ## Ideas
 
 - Build a reusable pre-fab checklist template with project-specific items added per design
-- Open each board's Gerber ZIP in an independent viewer before ordering as a second verification pass

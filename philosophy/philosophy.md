@@ -8,6 +8,7 @@ The motivation and thinking behind how I learn and build. Overarching principles
 
 - [[finding-good-information|Finding Good Information]] — going upstream past algorithmic feeds
 - [[learning-strategies|Learning Strategies]] — foundational texts first, make early, triangulate
+- [[chunk-based-learning|Chunk-Based Learning]] — structuring a long learning effort into natural knowledge units
 
 ## Key Resources
 
@@ -20,3 +21,4 @@ The motivation and thinking behind how I learn and build. Overarching principles
 
 - `ephemeralization.md` — Fuller's do more with less applied across software, hardware, and craft
 - `whole-systems.md` — understanding the system a problem lives in before attacking the problem
+- Search for an existing skill tree before building chunks from scratch for a new domain
