@@ -21,3 +21,5 @@ Code, systems, and digital tooling.
 ## Key Resources
 
 ## Ideas
+
+- Build a computer from scratch via Nand2Tetris (logic gates up to OS and compiler) — https://www.nand2tetris.org
