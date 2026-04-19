@@ -8,15 +8,15 @@ A personal knowledge base built from practice, experimentation, and LLM-assisted
 
 ## Structure
 
-Two main domains, three levels deep maximum.
+Three domains, three levels deep maximum.
 
 **computation/** — Rust, Embedded Systems, DSP, Shaders, TouchDesigner, Game Engines, Web
 
 **making/** — Woodworking, Electronics, Music Making and Synthesis
 
-**principles-and-philosophy.md** — the thinking behind how I approach learning and building
+**philosophy/** — principles, learning approaches, epistemology
 
-Each folder has a hub file named after the folder (e.g. `rust/rust.md`) with a learning progression, key resources, and an ideas backlog. This keeps Obsidian graph nodes readable.
+Each folder has a hub file named after the folder (e.g. `rust/rust.md`) with a contents list, key resources, and an ideas backlog. This keeps Obsidian graph nodes readable.
 
 ## How It Works
 

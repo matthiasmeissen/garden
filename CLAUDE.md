@@ -48,10 +48,34 @@ Navigation only. Hard limits — a hub contains only:
 
 1. One short paragraph describing what this domain is about
 2. Contents list: `[[filename|Display Name]] — one-line description`
-3. Key Resources: one line per resource
+3. Key Resources: one line per resource, optionally with a URL
 4. Ideas: one line per idea (user-managed only)
+5. See Also: wiki-links to related hubs or concept files in other domains — these create cross-domain graph edges
 
 If content is more than one line, it needs its own concept file.
+
+Example hub:
+```markdown
+---
+type: hub
+category: computation
+tags: [dsp]
+---
+# DSP
+
+Digital signal processing — filters, synthesis, analysis.
+
+## Contents
+- [[moog-ladder-filter|Moog Ladder Filter]] — TPT implementation, gain compensation
+
+## Key Resources
+- The Computer Music Tutorial — Curtis Roads — comprehensive DSP reference — expertise: foundational — https://mitpress.mit.edu/...
+
+## Ideas
+
+## See Also
+- [[../../making/music-making-and-synthesis/music-making-and-synthesis|Music Making and Synthesis]] — shared ground on synthesis and sound design
+```
 
 ## Concept Files
 
