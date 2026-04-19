@@ -22,7 +22,6 @@ The output is ready to hand to `garden-plant` for vault insertion.
 
 ```
 garden/
-  principles-and-philosophy.md
   computation/
     _index.md
     rust/         embedded-systems/   dsp/
@@ -30,9 +29,13 @@ garden/
   making/
     _index.md
     woodworking/  electronics/   music-making-and-synthesis/
+  philosophy/
+    _index.md                        <- core principles and manifesto
+    finding-good-information.md      <- example concept file
+    [other concept files...]
 ```
 
-**Domain tags to use:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing`
+**Domain tags to use:** `#rust` `#embedded` `#dsp` `#shaders` `#touchdesigner` `#game-engines` `#web` `#woodworking` `#electronics` `#synthesis` `#eurorack` `#faust` `#vcv-rack` `#supercollider` `#pcb` `#cnc` `#3d-printing` `#sewing` `#philosophy` `#learning` `#epistemology` `#systems-thinking`
 
 ## How to Harvest
 
@@ -47,7 +50,7 @@ If the input is ambiguous, ask: "Should I harvest the current conversation, or d
 
 ### Step 2 — Identify the domain(s)
 
-Map the content to one or more garden domains. A session on Moog ladder filters touches both `computation/dsp` and `making/music-making-and-synthesis`. Flag cross-domain content explicitly.
+Map the content to one or more garden domains. A session on Moog ladder filters touches both `computation/dsp` and `making/music-making-and-synthesis`. A session on how to find good learning resources belongs in `philosophy/`. Flag cross-domain content explicitly.
 
 ### Step 3 — Extract with intention
 
@@ -122,4 +125,4 @@ Write concepts in plain language as if explaining to your future self after a lo
 
 ## After Harvesting
 
-Tell the user: "Here's your harvest. You can now use `garden-plant` to get instructions for adding this to the vault."
+Tell the user: "Here's your harvest. You can now use `garden-plant` inside the garden repo to write this into the vault."

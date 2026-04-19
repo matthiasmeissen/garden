@@ -15,9 +15,8 @@ This skill runs inside the `garden/` repo via Claude Code. It has filesystem acc
 
 ```
 garden/
-  principles-and-philosophy.md      ← philosophy and first principles only
   computation/
-    _index.md                        ← table of contents + ideas
+    _index.md                        <- table of contents + ideas
     rust/_index.md
     embedded-systems/_index.md
     dsp/_index.md
@@ -26,10 +25,13 @@ garden/
     game-engines/_index.md
     web/_index.md
   making/
-    _index.md                        ← table of contents + ideas
+    _index.md                        <- table of contents + ideas
     woodworking/_index.md
     electronics/_index.md
     music-making-and-synthesis/_index.md
+  philosophy/
+    _index.md                        <- core principles and manifesto
+    [concept files, one per idea]
 ```
 
 **File rules:**
@@ -62,7 +64,7 @@ This prevents duplicating content that's already there.
 | Resource (book, tool, link) | Add to Key Resources in subdomain `_index.md` |
 | Idea or open question | Add to Ideas in subdomain `_index.md` |
 | Cross-domain concept | Create file in primary domain; add See Also link in secondary domain `_index.md` |
-| First-principles insight | Append to `principles-and-philosophy.md` |
+| First-principles insight or philosophy concept | `philosophy/` — small concepts append to `_index.md`, larger ones get their own file (e.g. `philosophy/finding-good-information.md`) |
 
 ### Step 4 — Write the files
 
@@ -85,8 +87,10 @@ This prevents duplicating content that's already there.
 - Add ideas to Ideas as bullet points
 - Add a See Also section if cross-references exist
 
-**Updating `principles-and-philosophy.md`:**
-- Append new principles as concise bullet points under the relevant section
+**Updating `philosophy/_index.md`:**
+- The index holds the core manifesto — overarching principles and the "why" behind everything
+- Small insights append here as concise bullet points
+- Larger ideas (like a full approach to finding good information) get their own file
 - Don't duplicate existing principles — read first
 
 ### Step 5 — Confirm and suggest commit
