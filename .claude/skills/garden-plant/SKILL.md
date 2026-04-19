@@ -37,8 +37,27 @@ garden/
 **File rules:**
 - Max 3 levels deep — never go deeper
 - One concept per file, 500–2000 words ideal
-- `_index.md` files are hubs — always update them when adding concept files
+- `_index.md` files are navigation hubs only — they must stay lean (see Index Budget below)
 - Tags connect across domains — use them in every file
+- When in doubt, create a new file rather than expanding an index
+
+## The Index Budget — CRITICAL
+
+`_index.md` files serve one purpose: **navigation**. They are not content files.
+
+An `_index.md` must contain only:
+1. A one-paragraph description of what this domain/subdomain is about
+2. A table of contents linking to concept files (`[[filename|Display Name]]`)
+3. A Key Resources list — one line per resource, no prose
+4. An Ideas section — one line per idea, no prose
+
+**Hard limits:**
+- No explanatory paragraphs in indexes
+- No sections with multiple bullet points expanding on a concept
+- No "How I approach X" sections — those belong in concept files
+- If content is more than one line, it needs its own file
+
+This applies equally to `philosophy/_index.md`. The philosophy index is a signpost to concept files, not a place to write philosophy.
 
 ## How to Plant
 
@@ -57,14 +76,18 @@ This prevents duplicating content that's already there.
 
 ### Step 3 — Decide what goes where
 
+Default bias: **create a new file**. Only touch an index for navigation updates, one-line resource entries, and one-line ideas.
+
 | Content type | Action |
 |---|---|
-| New concept worth its own file | Create new file in subdomain folder, update subdomain `_index.md` |
-| Small concept or clarification | Append to existing concept file, or add inline to subdomain `_index.md` |
-| Resource (book, tool, link) | Add to Key Resources in subdomain `_index.md` |
-| Idea or open question | Add to Ideas in subdomain `_index.md` |
+| Any named concept, approach, or idea with more than a sentence to say | Create a new concept file |
+| Resource (book, tool, link) | One line in Key Resources of the relevant `_index.md` |
+| Idea or open question | One line in Ideas of the relevant `_index.md` |
 | Cross-domain concept | Create file in primary domain; add See Also link in secondary domain `_index.md` |
-| First-principles insight or philosophy concept | `philosophy/` — small concepts append to `_index.md`, larger ones get their own file (e.g. `philosophy/finding-good-information.md`) |
+| Philosophy / principle / approach | Create a file in `philosophy/` — e.g. `philosophy/finding-good-information.md`, `philosophy/learning-strategies.md` |
+| Core vault description or "about" content | `philosophy/_index.md` one-paragraph description only |
+
+**Never route full concepts, explanations, or multi-bullet sections into any `_index.md`.**
 
 ### Step 4 — Write the files
 
@@ -74,24 +97,29 @@ This prevents duplicating content that's already there.
 
 [tags: #tag1 #tag2]
 
-[body: 500–2000 words, plain language, written for your future self after a long break]
+[body: plain language, written for your future self after a long break]
 
 ## See Also
 - [[../_index|Domain Index]]
 - [[../../other-domain/subdomain/concept|Related Concept]] — why they relate
 ```
 
-**Updating a subdomain `_index.md`:**
-- Add new concept files to the table of contents as `[[filename|Display Name]]`
-- Add resources to Key Resources: `- Title — Author — one-liner — expertise: beginner/intermediate/advanced`
-- Add ideas to Ideas as bullet points
-- Add a See Also section if cross-references exist
+**Updating any `_index.md` (index entries only):**
+```
+## Contents
+- [[concept-filename|Concept Name]] — one-line description
 
-**Updating `philosophy/_index.md`:**
-- The index holds the core manifesto — overarching principles and the "why" behind everything
-- Small insights append here as concise bullet points
-- Larger ideas (like a full approach to finding good information) get their own file
-- Don't duplicate existing principles — read first
+## Key Resources
+- Title — Author — one-liner — expertise: beginner/intermediate/advanced
+
+## Ideas
+- one-line idea or open question
+```
+
+**`philosophy/_index.md` specifically:**
+- One short paragraph: what this domain is and why it exists
+- Contents list linking to concept files
+- No principles written out here — those live in concept files like `ephemeralization.md`, `finding-good-information.md`
 
 ### Step 5 — Confirm and suggest commit
 
